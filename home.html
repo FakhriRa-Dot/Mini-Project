@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ribeye&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .bg-green {
+          background-color: oklch(0.33 0.05 169);
+        }
+        .bg-brown {
+          background-color: oklch(0.4 0.09 57);
+        }
+        .bg-sand {
+          background-color: oklch(0.67 0.09 72);
+        }
+        .bg-cream {
+          background-color: oklch(0.95 0.01 90);
+        }
+
+        .text-green {
+          color: oklch(0.33 0.05 169);
+        }
+        .text-brown {
+          color: oklch(0.4 0.09 57);
+        }
+        .text-sand {
+          color: oklch(0.67 0.09 72);
+        }
+        .text-cream {
+          color: oklch(0.95 0.01 90);
+        }
+      }
+
+      @layer base {
+        .font-open-sans {
+          font-family: "Open Sans", sans-serif;
+        }
+        .font-ribeye {
+          font-family: "Ribeye", serif;
+        }
+        .font-tinos {
+          font-family: "Tinos", serif;
+        }
+        .font-young-serif {
+          font-family: "Young Serif", serif;
+        }
+      }
+    </style>
+
+    <title>The Retro Bean Cafe</title>
+  </head>
+  <body>
+    <div class="bg-green min-h-screen">
+      <!-- NAVBAR -->
+      <nav
+        class="w-full bg-brown p-4 text-cream fixed top-0 left-0 w-full z-50"
+      >
+        <div class="flex items-center justify-between md:flex md:flex-items">
+          <div class="flex items-center gap-2">
+            <img src="./assets/logo-kopi.png" class="w-8 h-8" />
+            <span class="font-bold font-ribeye text-lg"
+              >THE RETRO BEAN CAFE</span
+            >
+          </div>
+
+          <div
+            class="hidden md:flex justify-center gap-6 font-medium font-tinos"
+          >
+            <a href="home.html" class="hover:underline">Home</a>
+            <a href="menu.html" class="hover:underline">Menu</a>
+            <a href="about.html" class="hover:underline">About</a>
+            <a href="contact.html" class="hover:underline">Contact</a>
+          </div>
+
+          <!-- <div class="hidden md:flex justify-end">
+            <button
+              class="px-4 py-2 rounded-lg bg-cream text-brown font-tinos hover:opacity-80 transition"
+            >
+              Order Online
+            </button>
+          </div> -->
+
+          <button
+            class="md:hidden text-3xl"
+            onclick="document.getElementById('mobileMenu').classList.toggle('hidden')"
+          >
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <div
+          id="mobileMenu"
+          class="hidden flex flex-col mt-4 gap-3 text-cream font-tinos font-medium md:hidden"
+        >
+          <a href="home.html" class="hover:underline">Home</a>
+          <a href="menu.html" class="hover:underline">Menu</a>
+          <a href="about.html" class="hover:underline">About</a>
+          <a href="contact.html" class="hover:underline">Contact</a>
+
+          <!-- <button
+            class="mt-2 px-4 py-2 rounded-lg bg-cream text-brown font-tinos hover:opacity-80 transition w-fit"
+          >
+            Order Online
+          </button> -->
+        </div>
+      </nav>
+
+      <div class="container mt-10 mx-auto px-0 lg:px-10">
+        <!-- HERO SECTION -->
+        <section>
+          <div class="relative">
+            <img
+              src="./assets/hero-img.jpg"
+              alt="hero-img"
+              class="w-full h-[400px] object-cover"
+            />
+
+            <div class="absolute inset-0 bg-black/50"></div>
+
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center gap-5"
+            >
+              <h1 class="text-cream text-4xl font-ribeye font-bold text-center">
+                Great Time and Good Coffeee <br />
+                at the Retro Bean Cafe
+              </h1>
+              <p class="text-cream font-tinos">
+                Your friendly neighborhood spot since 1990
+              </p>
+
+              <a
+                href="menu.html"
+                class="bg-cream text-brown font-young-serif px-6 py-2 rounded-lg hover:opacity-80 transition inline-block"
+              >
+                OUR MENU
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAVORITE SECTION -->
+        <section>
+          <div class="bg-cream py-16">
+            <h2
+              class="text-center text-3xl font-extrabold text-brown mb-12 font-open-sans"
+            >
+              FAVORITE'S
+            </h2>
+
+            <div
+              class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center"
+            >
+              <div>
+                <img
+                  src="./assets/coffe-latte.jpg"
+                  alt="caffe-latte"
+                  class="w-40 h-40 mx-auto rounded-full object-cover mb-4"
+                />
+                <h3 class="text-lg font-bold font-tinos text-brown">
+                  Caffe Latte
+                </h3>
+                <p class="text-sm font-tinos text-brown">
+                  Classic milk coffee with a soft and creamy taste.
+                </p>
+              </div>
+
+              <div>
+                <img
+                  src="./assets/matcha-latte.jpg"
+                  alt="Matcha Latte"
+                  class="w-40 h-40 mx-auto rounded-full object-cover mb-4"
+                />
+                <h3 class="text-lg font-bold font-tinos text-brown">
+                  Matcha Latte
+                </h3>
+                <p class="text-sm font-tinos text-brown">
+                  A typical Japanese green drink with an earthy aroma and soft
+                  sweet taste.
+                </p>
+              </div>
+
+              <div>
+                <img
+                  src="./assets/toast.jpg"
+                  alt="Toast"
+                  class="w-40 h-40 mx-auto rounded-full object-cover mb-4"
+                />
+                <h3 class="text-lg font-bold font-tinos text-brown">Toast</h3>
+                <p class="text-sm font-tinos text-brown">
+                  Warm toast with a crispy texture on the outside and soft on
+                  the inside.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STORY SECTION -->
+        <section>
+          <div class="bg-cream py-16">
+            <div class="max-w-6xl mx-auto px-6">
+              <h2
+                class="text-center text-3xl font-extrabold text-brown mb-12 font-open-sans"
+              >
+                OUR STORY
+              </h2>
+
+              <div class="flex flex-col md:flex-row items-center gap-10">
+                <img
+                  src="./assets/our-story.jpg"
+                  alt="our story"
+                  class="w-full md:w-[40%] h-[220px] md:h-[350px]rounded-lg object-cover"
+                />
+
+                <p
+                  class="text-brown font-tinos text-justify leading-relaxed md:max-w-[55%]"
+                >
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Delectus, excepturi omnis libero possimus minus corrupti ex
+                  deserunt. Quo adipisci praesentium alias officiis, velit
+                  exercitationem optio iusto, quasi tempora error molestias
+                  minima? Fugit voluptates inventore ullam reiciendis..."
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-brown text-cream py-10">
+          <div
+            class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6"
+          >
+            <div class="font-open-sans">
+              <h4 class="text-lg font-semibold font-tinos mb-3">Visit Us</h4>
+
+              <p>123 Vintage Lane, Nostalgia City, NC 201</p>
+              <p class="mt-4">(10) 456 102003</p>
+            </div>
+
+            <div class="font-open-sans">
+              <h4 class="text-lg font-semibold font-tinos mb-3">
+                Opening Hours
+              </h4>
+
+              <p>Weekdays 8am - 10pm</p>
+              <p class="mt-2">Weekend 10am - 9pm</p>
+            </div>
+
+            <div class="font-open-sans">
+              <h4 class="text-lg font-semibold font-tinos mb-3">Follow Us</h4>
+
+              <div class="flex gap-4 text-2xl">
+                <i
+                  class="fa-brands fa-instagram cursor-pointer hover:text-green"
+                ></i>
+                <i
+                  class="fa-brands fa-tiktok cursor-pointer hover:text-green"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
+    }
+  </script>
+</html>

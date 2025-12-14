@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ribeye&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .bg-green {
+          background-color: oklch(0.33 0.05 169);
+        }
+        .bg-brown {
+          background-color: oklch(0.4 0.09 57);
+        }
+        .bg-sand {
+          background-color: oklch(0.67 0.09 72);
+        }
+        .bg-cream {
+          background-color: oklch(0.95 0.01 90);
+        }
+
+        .text-green {
+          color: oklch(0.33 0.05 169);
+        }
+        .text-brown {
+          color: oklch(0.4 0.09 57);
+        }
+        .text-sand {
+          color: oklch(0.67 0.09 72);
+        }
+        .text-cream {
+          color: oklch(0.95 0.01 90);
+        }
+
+        .border-green {
+          border-color: oklch(0.33 0.05 169);
+        }
+
+        .border-sand {
+          border-color: oklch(0.67 0.09 72);
+        }
+      }
+
+      @layer base {
+        .font-open-sans {
+          font-family: "Open Sans", sans-serif;
+        }
+        .font-ribeye {
+          font-family: "Ribeye", serif;
+        }
+        .font-tinos {
+          font-family: "Tinos", serif;
+        }
+        .font-young-serif {
+          font-family: "Young Serif", serif;
+        }
+      }
+    </style>
+
+    <title>TRBC - About</title>
+  </head>
+  <body>
+    <div class="bg-cream min-h-screen">
+      <nav
+        class="w-full p-4 text-green bg-cream fixed top-0 left-0 w-full z-50"
+      >
+        <div class="flex items-center justify-between md:flex md:flex-items">
+          <div class="flex items-center gap-2">
+            <img src="./assets/logo-kopi.png" class="w-8 h-8" />
+            <span class="font-bold font-ribeye text-lg"
+              >THE RETRO BEAN CAFE</span
+            >
+          </div>
+
+          <div
+            class="hidden md:flex justify-center gap-6 font-medium font-tinos"
+          >
+            <a href="home.html" class="hover:underline">Home</a>
+            <a href="menu.html" class="hover:underline">Menu</a>
+            <a href="about.html" class="hover:underline">About</a>
+            <a href="contact.html" class="hover:underline">Contact</a>
+          </div>
+
+          <!-- <div class="hidden md:flex justify-end">
+            <button
+              class="px-4 py-2 rounded-lg bg-green text-cream font-tinos hover:opacity-80 transition"
+            >
+              Order Online
+            </button>
+          </div> -->
+
+          <button
+            class="md:hidden text-3xl"
+            onclick="document.getElementById('mobileMenu').classList.toggle('hidden')"
+          >
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <div
+          id="mobileMenu"
+          class="hidden flex flex-col mt-4 gap-3 text-green font-tinos font-medium md:hidden"
+        >
+          <a href="home.html" class="hover:underline">Home</a>
+          <a href="menu.html" class="hover:underline">Menu</a>
+          <a href="about.html" class="hover:underline">About</a>
+          <a href="contact.html" class="hover:underline">Contact</a>
+
+          <!-- <button
+            class="mt-2 px-4 py-2 rounded-lg bg-green text-cream font-tinos hover:opacity-80 transition w-fit"
+          >
+            Order Online
+          </button> -->
+        </div>
+      </nav>
+
+      <!-- HERO SECTION -->
+      <section>
+        <div class="relative mt-16 mx-auto px-0">
+          <img
+            src="./assets/hero-story.jpg"
+            alt="cafe-inter"
+            class="w-full h-[480px] object-cover"
+          />
+          <div class="absolute inset-0 bg-black/50"></div>
+
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center gap-5"
+          >
+            <h1 class="text-cream text-4xl font-ribeye font-bold text-center">
+              Our Story, <br />
+              Brewed with Passion
+            </h1>
+            <p class="text-cream font-tinos">
+              Discover heart, soul, and community behind every cup.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENT -->
+      <div class="container mt-6 mx-auto px-0 lg:px-10">
+        <section>
+          <div class="bg-cream px-6 md:px-16 mt-12">
+            <h2
+              class="text-center text-3xl font-extrabold text-green mb-12 font-open-sans"
+            >
+              From Bean to <br />
+              Community
+            </h2>
+
+            <div class="flex flex-col md:flex-row-reverse items-center gap-10">
+              <img
+                src="./assets/community.jpg"
+                alt="community"
+                class="w-[300px] h-[355px] md:h-[435px] object-cover"
+              />
+
+              <div class="text-justify font-tinos">
+                <p class="mb-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                  quis nisi facilis dignissimos, laborum quidem sapiente debitis
+                  cupiditate suscipit excepturi at laboriosam, dolorum deserunt.
+                  Reiciendis error doloribus a, impedit explicabo consequuntur
+                  laudantium, aspernatur, alias fugit vero sunt. Facilis
+                  expedita, asperiores ex neque, ad unde necessitatibus modi
+                  quae mollitia, aliquam suscipit.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ratione magni dolorem sit harum fuga suscipit, laboriosam
+                  nostrum dolores facilis reprehenderit, eligendi, perferendis
+                  placeat perspiciatis. Quae repellat doloremque aut, voluptas
+                  distinctio recusandae ipsum unde consectetur tempora pariatur
+                  velit voluptatem officia aliquam illum incidunt sint rem
+                  numquam nostrum deserunt voluptatum blanditiis necessitatibus
+                  ab. Omnis provident sit beatae, cum soluta totam laudantium!
+                  Accusamus, necessitatibus magnam? Deserunt non rerum vitae,
+                  neque enim quasi, aut officiis dolore tempora exercitationem
+                  culpa.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="bg-cream px-6 md:px-16 mt-12">
+            <h1
+              class="text-center text-3xl font-extrabold text-green mb-2 font-open-sans"
+            >
+              Our Philosophy
+            </h1>
+
+            <p
+              class="text-green font-tinos text-sm text-center mb-12 max-w-2xl mx-auto"
+            >
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+              adipisci!
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div
+                class="border border-sand rounded-xl p-8 text-center bg-cream"
+              >
+                <div
+                  class="bg-green w-16 h-16 rounded-full mx-auto mb-4 text-sand flex items-center justify-center"
+                >
+                  <i class="fa fa-coffee text-3xl"></i>
+                </div>
+
+                <h3 class="font-bold font-young-serif text-green mb-2">
+                  Quality Bean
+                </h3>
+                <p class="text-green font-tinos text-sm">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Fugit, harum!
+                </p>
+              </div>
+
+              <div
+                class="border border-sand rounded-xl p-8 text-center bg-cream"
+              >
+                <div
+                  class="bg-green w-16 h-16 rounded-full mx-auto mb-4 text-sand flex items-center justify-center"
+                >
+                  <i class="fa fa-users text-3xl"></i>
+                </div>
+
+                <h3 class="font-bold font-young-serif text-green mb-2">
+                  Community First
+                </h3>
+                <p class="text-green font-tinos text-sm">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Fugit, harum!
+                </p>
+              </div>
+
+              <div
+                class="border border-sand rounded-xl p-8 text-center bg-cream"
+              >
+                <div
+                  class="bg-green w-16 h-16 rounded-full mx-auto mb-4 text-sand flex items-center justify-center"
+                >
+                  <i class="fa fa-hourglass-start text-3xl"></i>
+                </div>
+
+                <h3 class="font-bold font-young-serif text-green mb-2">
+                  Nostalgia Vibes
+                </h3>
+                <p class="text-green font-tinos text-sm">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Fugit, harum!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="bg-cream px-6 md:px-16 mt-12">
+            <h2
+              class="text-center text-3xl font-extrabold text-green mb-2 font-open-sans"
+            >
+              Meet the Team
+            </h2>
+
+            <p
+              class="text-green font-tinos text-sm text-center mb-12 max-w-2xl mx-auto"
+            >
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
+              adipisci!
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="text-center">
+                <img
+                  src="./assets/team-3.jpg"
+                  alt="team-1"
+                  class="w-40 h-40 rounded-full mx-auto mb-4 object-cover object-top"
+                />
+
+                <h3 class="font-bold text-green text-lg font-young-serif">
+                  Jin Kim
+                </h3>
+                <h3 class="font-bold text-sand font-young-serif mb-3">
+                  Founder & Head Barista
+                </h3>
+                <p class="text-green font-tinos text-sm max-w-xs mx-auto">
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Officia, dolorum!"
+                </p>
+              </div>
+
+              <div class="text-center">
+                <img
+                  src="./assets/team-2.jpg"
+                  alt="team-2"
+                  class="w-40 h-40 rounded-full mx-auto mb-4 object-cover object-top"
+                />
+
+                <h3 class="font-bold text-green text-lg font-young-serif">
+                  JeyKey
+                </h3>
+                <h3 class="font-bold text-sand font-young-serif mb-3">
+                  Cafe Manager
+                </h3>
+                <p class="text-green font-tinos text-sm max-w-xs mx-auto">
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Officia, dolorum!"
+                </p>
+              </div>
+
+              <div class="text-center">
+                <img
+                  src="./assets/team-1.jpg"
+                  alt="team-3"
+                  class="w-40 h-40 rounded-full mx-auto mb-4 object-cover object-top"
+                />
+
+                <h3 class="font-bold text-green text-lg font-young-serif">
+                  Phi Kim
+                </h3>
+                <h3 class="font-bold text-sand font-young-serif mb-3">
+                  Pastry Chef
+                </h3>
+                <p class="text-green font-tinos text-sm max-w-xs mx-auto">
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Officia, dolorum!"
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div
+            class="py-20 px-6 md:px-16 mt-12 text-center text-cream"
+            style="
+              background: linear-gradient(
+                to top,
+                oklch(0.33 0.05 169),
+                oklch(0.33 0.05 169 / 0.8)
+              );
+            "
+          >
+            <h2 class="text-3xl font-extrabold font-open-sans mb-6">
+              Ready for a Taste of Nostalgia?
+            </h2>
+
+            <p class="max-w-2xl mx-auto font-young-serif">
+              Come on in for a coffee, stay for the good vibes. <br />
+              We can’t wait to welcome you.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <!-- FOOTER -->
+      <footer
+        class="mt-10 px-6 py-6 border-t border-sand flex flex-col md:flex-row items-center justify-between text-green font-tinos"
+      >
+        <p class="text-sm">© 2025 The Retro Bean Cafe — All rights reserved.</p>
+
+        <div class="flex gap-4 mt-3 md:mt-0 text-sm">
+          <a href="#" class="hover:underline">Instagram</a>
+          <a href="#" class="hover:underline">TikTok</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

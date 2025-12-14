@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ribeye&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .bg-green {
+          background-color: oklch(0.33 0.05 169);
+        }
+        .bg-brown {
+          background-color: oklch(0.4 0.09 57);
+        }
+        .bg-sand {
+          background-color: oklch(0.67 0.09 72);
+        }
+        .bg-cream {
+          background-color: oklch(0.95 0.01 90);
+        }
+
+        .text-green {
+          color: oklch(0.33 0.05 169);
+        }
+        .text-brown {
+          color: oklch(0.4 0.09 57);
+        }
+        .text-sand {
+          color: oklch(0.67 0.09 72);
+        }
+        .text-cream {
+          color: oklch(0.95 0.01 90);
+        }
+
+        .border-green {
+          border-color: oklch(0.33 0.05 169);
+        }
+
+        .border-cream {
+          border-color: oklch(0.95 0.01 90);
+        }
+
+        .border-sand {
+          border-color: oklch(0.67 0.09 72);
+        }
+      }
+
+      @layer base {
+        .font-open-sans {
+          font-family: "Open Sans", sans-serif;
+        }
+        .font-ribeye {
+          font-family: "Ribeye", serif;
+        }
+        .font-tinos {
+          font-family: "Tinos", serif;
+        }
+        .font-young-serif {
+          font-family: "Young Serif", serif;
+        }
+      }
+    </style>
+
+    <title>TRBC - Contact</title>
+  </head>
+  <body>
+    <div class="bg-green min-h-screen">
+      <!-- NAVBAR -->
+      <nav
+        class="w-full bg-brown p-4 text-cream fixed top-0 left-0 w-full z-50"
+      >
+        <div class="flex items-center justify-between md:flex md:flex-items">
+          <div class="flex items-center gap-2">
+            <img src="./assets/logo-kopi.png" class="w-8 h-8" />
+            <span class="font-bold font-ribeye text-lg"
+              >THE RETRO BEAN CAFE</span
+            >
+          </div>
+
+          <div
+            class="hidden md:flex justify-center gap-6 font-medium font-tinos"
+          >
+            <a href="home.html" class="hover:underline">Home</a>
+            <a href="menu.html" class="hover:underline">Menu</a>
+            <a href="about.html" class="hover:underline">About</a>
+            <a href="contact.html" class="hover:underline">Contact</a>
+          </div>
+          <!-- 
+          <div class="hidden md:flex justify-end">
+            <button
+              class="px-4 py-2 rounded-lg bg-cream text-green font-tinos hover:opacity-80 transition"
+            >
+              Order Online
+            </button>
+          </div> -->
+
+          <button
+            class="md:hidden text-3xl"
+            onclick="document.getElementById('mobileMenu').classList.toggle('hidden')"
+          >
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <div
+          id="mobileMenu"
+          class="hidden flex flex-col mt-4 gap-3 text-cream font-tinos font-medium md:hidden"
+        >
+          <a href="home.html" class="hover:underline">Home</a>
+          <a href="menu.html" class="hover:underline">Menu</a>
+          <a href="about.html" class="hover:underline">About</a>
+          <a href="contact.html" class="hover:underline">Contact</a>
+
+          <!-- <button
+            class="mt-2 px-4 py-2 rounded-lg bg-cream text-green font-tinos hover:opacity-80 transition w-fit"
+          >
+            Order Online
+          </button> -->
+        </div>
+      </nav>
+
+      <!-- CONTENT -->
+      <div
+        class="container bg-cream mx-auto px-6 py-10 md:py-20 md:px-16 mt-16"
+      >
+        <h1 class="text-4xl font-ribeye font-extrabold text-green">
+          Find Us & Get in Touch
+        </h1>
+        <p class="text-sand font-tinos mt-2">
+          We’d love to hear from you. Visit us, give us a call, or send a
+          message
+        </p>
+
+        <div class="flex flex-col-reverse md:flex-row gap-10 mt-12">
+          <div class="w-full md:w-1/2 space-y-10">
+            <div>
+              <h2 class="font-open-sans font-extrabold text-xl text-green mb-5">
+                Our Details
+              </h2>
+
+              <div class="space-y-6 font-young-serif">
+                <div
+                  class="flex flex-col md:flex-row md:items-center border-b border-sand pb-2 flex justify-between"
+                >
+                  <span class="text-sand">Our Address</span>
+                  <span class="text-brown"
+                    >123 Vintage Lane, Nostalgia City, NC 201</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col md:flex-row md:items-center border-b border-sand pb-2 flex justify-between"
+                >
+                  <span class="text-sand">Give Us a Call</span>
+                  <span class="text-brown">(10) 456 102003</span>
+                </div>
+
+                <div
+                  class="flex flex-col md:flex-row md:items-center justify-between border-b border-sand pb-2 justify-between"
+                >
+                  <span class="text-sand">Send Us an Email</span>
+                  <span class="text-brown">urban.cafe@gmail.com</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h2
+                class="text-xl font-young-serif font-extrabold text-green mb-5"
+              >
+                Opening Hours
+              </h2>
+
+              <div class="space-y-6 font-young-serif">
+                <div
+                  class="flex flex-col md:flex-row md:items-center justify-between border-b border-sand pb-2"
+                >
+                  <span class="text-sand">Weekdays</span>
+                  <span class="text-brown md:text-right">8am – 10pm</span>
+                </div>
+
+                <div
+                  class="flex flex-col md:flex-row md:items-center justify-between border-b border-sand pb-2"
+                >
+                  <span class="text-sand">Weekend</span>
+                  <span class="text-brown md:text-right">10am – 9pm</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full md:w-1/2">
+            <img
+              src="./assets/maps.jpg"
+              alt="maps"
+              class="w-full h-[380px] object-cover rounded-md"
+            />
+          </div>
+        </div>
+
+        <!-- PESAN -->
+        <div class="mt-16 p-6 border border-sand rounded-xl">
+          <h2 class="text-xl font-open-sans font-extrabold text-green">
+            Send Us a Message
+          </h2>
+          <p class="text-sand font-tinos text-sm mb-6">
+            Have a question or special request?
+          </p>
+
+          <form action="" class="space-y-5 font-tinos">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-brown font-young-serif mb-1">
+                  Your Name:
+                </label>
+                <input
+                  type="text"
+                  class="w-full bg-sand rounded-md px-4 py-2 outline-none"
+                />
+              </div>
+
+              <div>
+                <label class="block text-brown font-young-serif mb-1">
+                  Your Email:
+                </label>
+                <input
+                  type="email"
+                  class="w-full bg-sand rounded-md px-4 py-2 outline-none"
+                />
+              </div>
+
+              <div class="md:col-span-2">
+                <label class="block text-brown font-young-serif mb-1">
+                  Your Message:
+                </label>
+                <textarea
+                  rows="5"
+                  class="w-full bg-sand rounded-md px-4 py-2 outline-none resize-none"
+                ></textarea>
+              </div>
+
+              <div class="md:col-span-2 flex justify-end">
+                <button
+                  type="submit"
+                  class="bg-sand text-cream px-8 py-3 rounded-lg font-tinos hover:opacity-80 transition"
+                >
+                  Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <footer
+        class="px-6 py-6 border-t border-cream flex flex-col md:flex-row items-center justify-between text-cream font-tinos"
+      >
+        <p class="text-sm">© 2025 The Retro Bean Cafe — All rights reserved.</p>
+
+        <div class="flex gap-4 mt-3 md:mt-0 text-sm">
+          <a href="#" class="hover:underline">Instagram</a>
+          <a href="#" class="hover:underline">TikTok</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
