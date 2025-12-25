@@ -45,6 +45,38 @@
         .text-cream {
           color: oklch(0.95 0.01 90);
         }
+
+        .text-shadow {
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
+        }
+
+        .section {
+          @apply bg-cream py-16;
+        }
+        .section-container {
+          @apply max-w-6xl mx-auto px-6;
+        }
+        .section-title {
+          @apply text-center text-3xl font-extrabold font-open-sans text-brown mb-12;
+        }
+
+        .btn-primary {
+          @apply bg-cream text-brown font-young-serif px-6 py-2 rounded-lg
+           hover:opacity-80 transition;
+        }
+
+        .favorite-card {
+          @apply text-center;
+        }
+        .favorite-img {
+          @apply w-40 h-40 mx-auto rounded-full object-cover mb-4;
+        }
+        .favorite-title {
+          @apply text-2xl font-bold font-tinos text-brown;
+        }
+        .favorite-desc {
+          @apply text-lg font-tinos text-brown;
+        }
       }
 
       @layer base {
@@ -80,7 +112,7 @@
           </div>
 
           <div
-            class="hidden md:flex justify-center gap-6 font-medium font-tinos"
+            class="hidden md:flex justify-center gap-6 font-medium font-tinos text-lg"
           >
             <a href="home.html" class="hover:underline">Home</a>
             <a href="menu.html" class="hover:underline">Menu</a>
@@ -88,13 +120,13 @@
             <a href="contact.html" class="hover:underline">Contact</a>
           </div>
 
-          <!-- <div class="hidden md:flex justify-end">
+          <div class="hidden md:flex justify-end">
             <button
               class="px-4 py-2 rounded-lg bg-cream text-brown font-tinos hover:opacity-80 transition"
             >
               Order Online
             </button>
-          </div> -->
+          </div>
 
           <button
             class="md:hidden text-3xl"
@@ -113,131 +145,92 @@
           <a href="about.html" class="hover:underline">About</a>
           <a href="contact.html" class="hover:underline">Contact</a>
 
-          <!-- <button
+          <button
             class="mt-2 px-4 py-2 rounded-lg bg-cream text-brown font-tinos hover:opacity-80 transition w-fit"
           >
             Order Online
-          </button> -->
+          </button>
         </div>
       </nav>
 
       <div class="container mt-10 mx-auto px-0 lg:px-10">
         <!-- HERO SECTION -->
-        <section>
-          <div class="relative">
-            <img
-              src="./assets/hero-img.jpg"
-              alt="hero-img"
-              class="w-full h-[400px] object-cover"
-            />
+        <section class="relative">
+          <img
+            src="./assets/hero-img.jpg"
+            class="w-full h-[400px] object-cover"
+          />
+          <div class="absolute inset-0 bg-black/50"></div>
 
-            <div class="absolute inset-0 bg-black/50"></div>
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center gap-5 p-4"
+          >
+            <h1 class="text-cream text-4xl font-ribeye text-center text-shadow">
+              Great Time and Good Coffee <br />
+              at the Retro Bean Cafe
+            </h1>
 
-            <div
-              class="absolute inset-0 flex flex-col items-center justify-center gap-5"
-            >
-              <h1 class="text-cream text-4xl font-ribeye font-bold text-center">
-                Great Time and Good Coffeee <br />
-                at the Retro Bean Cafe
-              </h1>
-              <p class="text-cream font-tinos">
-                Your friendly neighborhood spot since 1990
-              </p>
+            <p class="text-cream font-tinos text-xl text-center">
+              Your friendly neighborhood spot since 1990
+            </p>
 
-              <a
-                href="menu.html"
-                class="bg-cream text-brown font-young-serif px-6 py-2 rounded-lg hover:opacity-80 transition inline-block"
-              >
-                OUR MENU
-              </a>
-            </div>
+            <a href="menu.html" class="btn-primary"> OUR MENU </a>
           </div>
         </section>
 
         <!-- FAVORITE SECTION -->
-        <section>
-          <div class="bg-cream py-16">
-            <h2
-              class="text-center text-3xl font-extrabold text-brown mb-12 font-open-sans"
-            >
-              FAVORITE'S
-            </h2>
+        <section class="section">
+          <h2 class="section-title">FAVORITES</h2>
 
-            <div
-              class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center"
-            >
-              <div>
-                <img
-                  src="./assets/coffe-latte.jpg"
-                  alt="caffe-latte"
-                  class="w-40 h-40 mx-auto rounded-full object-cover mb-4"
-                />
-                <h3 class="text-lg font-bold font-tinos text-brown">
-                  Caffe Latte
-                </h3>
-                <p class="text-sm font-tinos text-brown">
-                  Classic milk coffee with a soft and creamy taste.
-                </p>
-              </div>
+          <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="favorite-card">
+              <img src="./assets/coffe-latte.jpg" class="favorite-img" />
+              <h3 class="favorite-title">Caffe Latte</h3>
+              <p class="favorite-desc">
+                Classic milk coffee with a soft and creamy taste.
+              </p>
+            </div>
 
-              <div>
-                <img
-                  src="./assets/matcha-latte.jpg"
-                  alt="Matcha Latte"
-                  class="w-40 h-40 mx-auto rounded-full object-cover mb-4"
-                />
-                <h3 class="text-lg font-bold font-tinos text-brown">
-                  Matcha Latte
-                </h3>
-                <p class="text-sm font-tinos text-brown">
-                  A typical Japanese green drink with an earthy aroma and soft
-                  sweet taste.
-                </p>
-              </div>
+            <div class="favorite-card">
+              <img src="./assets/matcha-latte.jpg" class="favorite-img" />
+              <h3 class="favorite-title">Matcha Latte</h3>
+              <p class="favorite-desc">Earthy aroma with a gentle sweetness.</p>
+            </div>
 
-              <div>
-                <img
-                  src="./assets/toast.jpg"
-                  alt="Toast"
-                  class="w-40 h-40 mx-auto rounded-full object-cover mb-4"
-                />
-                <h3 class="text-lg font-bold font-tinos text-brown">Toast</h3>
-                <p class="text-sm font-tinos text-brown">
-                  Warm toast with a crispy texture on the outside and soft on
-                  the inside.
-                </p>
-              </div>
+            <div class="favorite-card">
+              <img src="./assets/toast.jpg" class="favorite-img" />
+              <h3 class="favorite-title">Toast</h3>
+              <p class="favorite-desc">Crispy outside, soft inside.</p>
             </div>
           </div>
         </section>
 
         <!-- STORY SECTION -->
-        <section>
-          <div class="bg-cream py-16">
-            <div class="max-w-6xl mx-auto px-6">
-              <h2
-                class="text-center text-3xl font-extrabold text-brown mb-12 font-open-sans"
+        <section class="section">
+          <div class="section-container">
+            <h2 class="section-title">OUR STORY</h2>
+
+            <div class="flex flex-col md:flex-row items-center gap-10">
+              <img
+                src="./assets/our-story.jpg"
+                class="w-full md:w-[40%] h-[350px] rounded-lg object-cover"
+              />
+
+              <p
+                class="text-brown text-lg font-tinos leading-relaxed md:max-w-[55%]"
               >
-                OUR STORY
-              </h2>
-
-              <div class="flex flex-col md:flex-row items-center gap-10">
-                <img
-                  src="./assets/our-story.jpg"
-                  alt="our story"
-                  class="w-full md:w-[40%] h-[220px] md:h-[350px]rounded-lg object-cover"
-                />
-
-                <p
-                  class="text-brown font-tinos text-justify leading-relaxed md:max-w-[55%]"
-                >
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Delectus, excepturi omnis libero possimus minus corrupti ex
-                  deserunt. Quo adipisci praesentium alias officiis, velit
-                  exercitationem optio iusto, quasi tempora error molestias
-                  minima? Fugit voluptates inventore ullam reiciendis..."
-                </p>
-              </div>
+                "The Retro Bean Cafe was founded in 1990 as a small neighborhood
+                coffee spot with a simple mission: to bring people together
+                through great coffee and warm conversations. Inspired by classic
+                café culture, we combine a cozy retro atmosphere with carefully
+                selected coffee beans and handcrafted beverages." <br />
+                <br />
+                "Over the years, The Retro Bean Cafe has become a place where
+                stories are shared, friendships are built, and moments are
+                enjoyed at a slower pace. Whether you come for your morning
+                coffee, an afternoon break, or a relaxing evening, we welcome
+                you to feel at home and enjoy every sip."
+              </p>
             </div>
           </div>
         </section>

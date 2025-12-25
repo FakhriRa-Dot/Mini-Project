@@ -53,6 +53,42 @@
         .border-sand {
           border-color: oklch(0.67 0.09 72);
         }
+
+        .menu-section {
+          @apply mt-10;
+        }
+
+        .menu-title {
+          @apply font-bold font-open-sans text-xl md:text-2xl mb-3;
+        }
+
+        .menu-divider {
+          @apply border-t border-sand mb-4;
+        }
+
+        .menu-item {
+          @apply space-y-1;
+        }
+
+        .menu-row {
+          @apply flex justify-between items-center mb-2;
+        }
+
+        .menu-name {
+          @apply font-semibold text-green font-tinos text-lg md:text-xl;
+        }
+
+        .menu-price {
+          @apply font-semibold text-green font-tinos text-lg;
+        }
+
+        .menu-desc {
+          @apply text-sand text-sm md:text-lg font-tinos;
+        }
+
+        .menu-fav {
+          @apply fa-solid fa-thumbs-up text-green text-sm;
+        }
       }
 
       @layer base {
@@ -88,7 +124,7 @@
           </div>
 
           <div
-            class="hidden md:flex justify-center gap-6 font-medium font-tinos"
+            class="hidden md:flex justify-center gap-6 font-medium font-tinos text-lg"
           >
             <a href="home.html" class="hover:underline">Home</a>
             <a href="menu.html" class="hover:underline">Menu</a>
@@ -96,13 +132,13 @@
             <a href="contact.html" class="hover:underline">Contact</a>
           </div>
 
-          <!-- <div class="hidden md:flex justify-end">
+          <div class="hidden md:flex justify-end">
             <button
               class="px-4 py-2 rounded-lg bg-cream text-green font-tinos hover:opacity-80 transition"
             >
               Order Online
             </button>
-          </div> -->
+          </div>
 
           <button
             class="md:hidden text-3xl"
@@ -121,11 +157,11 @@
           <a href="about.html" class="hover:underline">About</a>
           <a href="contact.html" class="hover:underline">Contact</a>
 
-          <!-- <button
+          <button
             class="mt-2 px-4 py-2 rounded-lg bg-cream text-green font-tinos hover:opacity-80 transition w-fit"
           >
             Order Online
-          </button> -->
+          </button>
         </div>
       </nav>
 
@@ -133,232 +169,205 @@
       <div class="container mt-10 mx-auto px-0 lg:px-10">
         <div class="bg-cream mx-auto p-8">
           <h1
-            class="text-3xl font-extrabold font-green font-open-sans mb-2 mt-8"
+            class="text-4xl font-extrabold font-green font-open-sans mb-2 mt-8"
           >
             OUR MENU
           </h1>
-          <p class="text-sm text-sand font-young-serif mb-6">
+          <p class="text-lg text-sand font-young-serif mb-6">
             Good Eats & Tasty Treats
           </p>
 
-          <div class="border border-green rounded-2xl p-6 bg-cream">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="text-sand text-xl">
-                <i class="fa fa-star"></i>
-              </span>
-              <h2 class="font-semibold text-sand font-young-serif text-xl">
-                Barista's Choice
-              </h2>
-            </div>
+          <section class="menu-section">
+            <h3 class="menu-title">Coffee-Based Drinks</h3>
+            <hr class="menu-divider" />
 
-            <p class="text-black-900 font-semibold text-lg">
-              Caffè Latte – 28k
-            </p>
-
-            <p class="text-sand mt-1 text-sm">
-              Smooth espresso with creamy steamed milk, perfect for beginners
-              and light coffee lovers.
-            </p>
-          </div>
-
-          <h3 class="font-bold font-open-sans text-xl mt-10 mb-3">
-            Coffee-Based Drinks
-          </h3>
-          <hr class="border-t border-sand mb-4" />
-
-          <div class="space-y-6">
-            <div>
-              <div class="flex justify-between mb-2">
-                <p class="font-semibold text-green font-tinos text-lg">
-                  Cappucino
+            <div class="space-y-6">
+              <div>
+                <div class="menu-row">
+                  <p class="menu-name">Cappucino</p>
+                  <p class="menu-price">28k</p>
+                </div>
+                <p class="menu-desc">
+                  A balanced combination of espresso, milk, and foam with a
+                  bolder taste.
                 </p>
-                <p class="font-semibold text-green font-tinos text-lg">28k</p>
               </div>
-              <p class="text-sand text-sm font-tinos">
-                A balanced combination of espresso, milk, and foam with a bolder
-                taste.
-              </p>
-            </div>
 
-            <div>
-              <div class="flex justify-between mb-2">
-                <p class="font-semibold text-green font-tinos text-lg">
-                  Americano
+              <div class="menu-item">
+                <div class="menu-row">
+                  <p class="menu-name flex items-center gap-2">
+                    Caffè Latte
+                    <i class="menu-fav"></i>
+                  </p>
+                  <p class="menu-price">28k</p>
+                </div>
+                <p class="menu-desc">
+                  Smooth espresso with creamy steamed milk, perfect for
+                  beginners.
                 </p>
-                <p class="font-semibold text-green font-tinos text-lg">20k</p>
               </div>
-              <p class="text-sand text-sm font-tinos">
-                Espresso mixed with hot water, pure coffee taste is light and
-                refreshing.
-              </p>
-            </div>
 
-            <div>
-              <div class="flex justify-between mb-2">
-                <p class="font-semibold text-green font-tinos text-lg">
-                  Caramel Macchiato
+              <div class="menu-item">
+                <div class="menu-row">
+                  <p class="menu-name">Americano</p>
+                  <p class="menu-price">20k</p>
+                </div>
+                <p class="menu-desc">
+                  Espresso mixed with hot water, pure coffee taste is light and
+                  refreshing.
                 </p>
-                <p class="font-semibold text-green font-tinos text-lg">32k</p>
               </div>
-              <p class="text-sand text-sm font-tinos">
-                Sweet milk coffee with a rich and comforting caramel aroma.
-              </p>
-            </div>
 
-            <div>
-              <div class="flex justify-between mb-2">
-                <p class="font-semibold text-green font-tinos text-lg">
-                  Caffè Mocha
+              <div class="menu-item">
+                <div class="menu-row">
+                  <p class="menu-name">Caramel Macchiato</p>
+                  <p class="menu-price">32k</p>
+                </div>
+                <p class="menu-desc">
+                  Sweet milk coffee with a rich and comforting caramel aroma.
                 </p>
-                <p class="font-semibold text-green font-tinos text-lg">32k</p>
               </div>
-              <p class="text-sand text-sm font-tinos">
-                A sweet-bitter blend of espresso and chocolate, a favorite for
-                chocolate lovers.
-              </p>
-            </div>
-          </div>
 
-          <h3 class="font-bold font-open-sans text-xl mt-10 mb-3">
-            Non-Coffee Drinks
-          </h3>
-          <hr class="border-t border-sand mb-4" />
-
-          <div class="space-y-6">
-            <div>
-              <div class="flex justify-between mb-2">
-                <p class="font-semibold text-green font-tinos text-lg">
-                  Matcha Latte
+              <div class="menu-item">
+                <div class="menu-row">
+                  <p class="menu-name">Caffè Mocha</p>
+                  <p class="menu-price">32k</p>
+                </div>
+                <p class="menu-desc">
+                  A sweet-bitter blend of espresso and chocolate, a favorite for
+                  chocolate lovers.
                 </p>
-                <p class="font-semibold text-green font-tinos text-lg">30k</p>
               </div>
-              <p class="text-sand text-sm font-tinos">
-                Premium matcha with an earthy and gently sweet taste, a relaxing
-                non-coffee option.
-              </p>
             </div>
+          </section>
 
-            <div>
-              <div class="flex justify-between mb-2">
-                <p class="font-semibold text-green font-tinos text-lg">
-                  Chocolate / Hot Chocolate
+          <section class="menu-section">
+            <h3 class="menu-title">Non-Coffee Drinks</h3>
+            <hr class="menu-divider" />
+
+            <div class="space-y-6">
+              <div class="menu-item">
+                <div class="menu-row">
+                  <p class="menu-name flex items-center gap-2">
+                    Matcha Latte
+                    <i class="fa-solid fa-thumbs-up text-green"></i>
+                  </p>
+                  <p class="font-semibold text-green font-tinos">30k</p>
+                </div>
+                <p class="menu-desc">
+                  Premium matcha with an earthy and gently sweet taste, a
+                  relaxing non-coffee option.
                 </p>
-                <p class="font-semibold text-green font-tinos text-lg">25k</p>
               </div>
-              <p class="text-sand text-sm font-tinos">
-                A creamy chocolate drink with a rich sweet taste that is loved
-                by all ages.
-              </p>
-            </div>
 
-            <div>
-              <div class="flex justify-between mb-2">
-                <p class="font-semibold text-green font-tinos text-lg">
-                  Thai Tea
+              <div class="menu-item">
+                <div class="menu-row">
+                  <p class="menu-name">Chocolate / Hot Chocolate</p>
+                  <p class="menu-price">25k</p>
+                </div>
+                <p class="menu-desc">
+                  A creamy chocolate drink with a rich sweet taste that is loved
+                  by all ages.
                 </p>
-                <p class="font-semibold text-green font-tinos text-lg">22k</p>
               </div>
-              <p class="text-sand text-sm font-tinos">
-                Typical Thai tea with a sweet and creamy taste, fragrant and
-                fresh.
-              </p>
-            </div>
 
-            <div>
-              <div class="flex justify-between mb-2">
-                <p class="font-semibold text-green font-tinos text-lg">
-                  Lemon Tea
+              <div class="menu-item">
+                <div class="menu-row">
+                  <p class="menu-name">Thai Tea</p>
+                  <p class="menu-price">22k</p>
+                </div>
+                <p class="menu-desc">
+                  Typical Thai tea with a sweet and creamy taste, fragrant and
+                  fresh.
                 </p>
-                <p class="font-semibold text-green font-tinos text-lg">15k</p>
               </div>
-              <p class="text-sand text-sm font-tinos">
-                Fresh tea with a refreshing sweet and sour lemon sensation.
-              </p>
-            </div>
 
-            <div>
-              <div class="flex justify-between mb-2">
-                <p class="font-semibold text-green font-tinos text-lg">
-                  Lychee Tea
+              <div class="menu-item">
+                <div class="menu-row">
+                  <p class="menu-name">Lemon Tea</p>
+                  <p class="menu-price">15k</p>
+                </div>
+                <p class="menu-desc">
+                  Fresh tea with a refreshing sweet and sour lemon sensation.
                 </p>
-                <p class="font-semibold text-green font-tinos text-lg">18k</p>
               </div>
-              <p class="text-sand text-sm font-tinos">
-                Fruity tea with a fresh, light lychee aroma and perfect for hot
-                weather.
-              </p>
-            </div>
-          </div>
 
-          <h3 class="font-bold font-open-sans text-xl mt-10 mb-3">
-            Light Bites
-          </h3>
-          <hr class="border-t border-sand mb-4" />
-
-          <div class="space-y-6">
-            <div>
-              <div class="flex justify-between mb-2">
-                <p class="font-semibold text-green font-tinos text-lg">
-                  Toast (Butter / Chocolate / Cheese)
+              <div class="menu-item">
+                <div class="menu-row">
+                  <p class="menu-name">Lychee Tea</p>
+                  <p class="menu-price">18k</p>
+                </div>
+                <p class="menu-desc">
+                  Fruity tea with a fresh, light lychee aroma and perfect for
+                  hot weather.
                 </p>
-                <p class="font-semibold text-green font-tinos text-lg">15k</p>
               </div>
-              <p class="text-sand text-sm font-tinos">
-                Warm toast, crispy on the outside, soft on the inside, you can
-                choose your favorite toppings.
-              </p>
             </div>
+          </section>
 
-            <div>
-              <div class="flex justify-between mb-2">
-                <p class="font-semibold text-green font-tinos text-lg">
-                  French Fries
-                </p>
-                <p class="font-semibold text-green font-tinos text-lg">20k</p>
-              </div>
-              <p class="text-sand text-sm font-tinos">
-                Crispy, savory fries, a must for hanging out with.
-              </p>
-            </div>
+          <section class="menu-section">
+            <h3 class="menu-title">Light Bites</h3>
+            <hr class="menu-divider" />
 
-            <div>
-              <div class="flex justify-between mb-2">
-                <p class="font-semibold text-green font-tinos text-lg">
-                  Potato Wedges
+            <div class="space-y-6">
+              <div class="menu-item">
+                <div class="menu-row">
+                  <p class="menu-name flex items-center gap-2">
+                    Toast (Butter / Chocolate / Cheese)
+                    <i class="fa-solid fa-thumbs-up text-green"></i>
+                  </p>
+                  <p class="font-semibold text-green font-tinos">15k</p>
+                </div>
+                <p class="menu-desc">
+                  Warm toast, crispy on the outside, soft on the inside, you can
+                  choose your favorite toppings.
                 </p>
-                <p class="font-semibold text-green font-tinos text-lg">22k</p>
               </div>
-              <p class="text-sand text-sm font-tinos">
-                Thick potato slices with light seasoning, softer texture inside.
-              </p>
-            </div>
 
-            <div>
-              <div class="flex justify-between mb-2">
-                <p class="font-semibold text-green font-tinos text-lg">
-                  Chicken Wings
+              <div class="menu-item">
+                <div class="menu-row">
+                  <p class="menu-name">French Fries</p>
+                  <p class="menu-price">20k</p>
+                </div>
+                <p class="menu-desc">
+                  Crispy, savory fries, a must for hanging out with.
                 </p>
-                <p class="font-semibold text-green font-tinos text-lg">35k</p>
               </div>
-              <p class="text-sand text-sm font-tinos">
-                Crispy chicken wings with a choice of spicy, sweet, or barbecue
-                sauce.
-              </p>
-            </div>
 
-            <div>
-              <div class="flex justify-between mb-2">
-                <p class="font-semibold text-green font-tinos text-lg">
-                  Croissant
+              <div class="menu-item">
+                <div class="menu-row">
+                  <p class="menu-name">Potato Wedges</p>
+                  <p class="menu-price">22k</p>
+                </div>
+                <p class="menu-desc">
+                  Thick potato slices with light seasoning, softer texture
+                  inside.
                 </p>
-                <p class="font-semibold text-green font-tinos text-lg">18k</p>
               </div>
-              <p class="text-sand text-sm font-tinos">
-                A classic French pastry with flaky layers and a fragrant buttery
-                aroma.
-              </p>
+
+              <div class="menu-item">
+                <div class="menu-row">
+                  <p class="menu-name">Chicken Wings</p>
+                  <p class="menu-price">35k</p>
+                </div>
+                <p class="menu-desc">
+                  Crispy chicken wings with a choice of spicy, sweet, or
+                  barbecue sauce.
+                </p>
+              </div>
+
+              <div class="menu-item">
+                <div class="menu-row">
+                  <p class="menu-name">Croissant</p>
+                  <p class="menu-price">18k</p>
+                </div>
+                <p class="menu-desc">
+                  A classic French pastry with flaky layers and a fragrant
+                  buttery aroma.
+                </p>
+              </div>
             </div>
-          </div>
+          </section>
         </div>
       </div>
 
